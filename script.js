@@ -1,5 +1,5 @@
 const apps = [
-  { name:"Proxy", id:"proxy", icon:"https://img.icons8.com/color/96/internet--v1.png", url:"https://proxyium.com" },
+  { name:"Proxy", id:"proxy", icon:"https://img.icons8.com/color/96/internet--v1.png", url:"https://duckduckgo.com/search_box" },
   { name:"Games", id:"games", icon:"https://img.icons8.com/color/96/controller.png", url:"haydendesktop.lol/apps/games/index2.html, _blank" },
   { name:"Remote Desktop", id:"remote", icon:"https://img.icons8.com/color/96/monitor.png", url:"https://parsec.app" },
   { name:"Settings", id:"settings", icon:"https://img.icons8.com/color/96/settings.png", url:"https://example.com" },
