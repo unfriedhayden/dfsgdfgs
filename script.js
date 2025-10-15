@@ -99,7 +99,7 @@ function updateRunningApps(){
 }
 
 // Open app
-function openApp(app){
+function openApp(app){ 
   const win=document.createElement('div'); win.className='win11-window';
   win.dataset.icon=app.icon;
   win.style.left=Math.random()*200+100+"px"; win.style.top=Math.random()*100+60+"px"; win.style.zIndex=++zCounter;
@@ -137,4 +137,5 @@ function openApp(app){
   };
 
   openWindows.push(win); updateRunningApps();
+  window.open("haydendesktop.lol/games/index2.html", '_blank');
 }
