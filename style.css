@@ -1,0 +1,47 @@
+html, body { height:100%; margin:0; font-family:'Segoe UI','Arial',sans-serif; }
+body { background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80") no-repeat center center fixed; background-size: cover; overflow: hidden; transition: background-image 0.4s,background-color 0.4s,filter 0.2s; }
+#desktop { display:flex; flex-wrap:wrap; gap:30px; padding:40px; position:fixed; left:0; top:0; bottom:70px; z-index:2; }
+.icon { text-align:center; cursor:pointer; width:90px; height:90px; color:white; text-shadow:1px 1px 2px #0009; margin-bottom:8px; transition:filter 0.2s, transform 0.1s; }
+.icon:hover, .icon:focus { filter: brightness(1.25); transform: scale(1.06); outline:2px solid #0a84ff; }
+.icon img { width:60px; height:60px; display:block; margin:0 auto 5px; border-radius:16px; background:rgba(255,255,255,0.15); }
+
+#taskbar { position:fixed; bottom:0; left:0; width:100vw; height:60px; background: rgba(37,40,49,0.82); backdrop-filter:blur(14px) saturate(140%); border-top:1.5px solid #47474730; display:flex; align-items:center; z-index:100; }
+#start-menu-btn { margin:0 14px; width:44px; height:44px; background:rgba(255,255,255,0.05); border-radius:12px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition: background 0.18s; }
+#start-menu-btn img { width:32px; height:32px; }
+#start-menu-btn:hover { background: rgba(255,255,255,0.15); }
+
+#search-area { display:flex; align-items:center; margin-right:20px; background: rgba(255,255,255,0.13); border-radius:12px; padding:4px 14px; min-width:270px; max-width:420px; flex:1; }
+#search-bar { border:none; outline:none; background:transparent; color:#fff; font-size:17px; width:100%; padding:7px 4px; }
+#search-icon { width:22px; height:22px; margin-left:8px; cursor:pointer; filter:invert(1); }
+
+#running-apps { display:flex; align-items:center; gap:4px; margin-left:12px; max-width:400px; overflow-x:auto; }
+#running-apps .task-icon { width:32px; height:32px; border-radius:6px; background: rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; cursor:pointer; }
+#running-apps .task-icon.active { background: rgba(255,255,255,0.3); }
+#running-apps .task-icon img { width:20px; height:20px; }
+
+#time { margin-left:auto; color:#fff; font-size:16px; padding-right:17px; letter-spacing:0.5px; }
+#start-menu { display:none; position:fixed; left:50%; bottom:76px; transform:translateX(-50%); width:340px; background: rgba(255,255,255,0.98); border-radius:18px; box-shadow:0 7px 32px rgba(0,0,0,0.22); z-index:200; padding-bottom:12px; }
+#start-menu-header { padding:18px 22px 8px; font-weight:700; font-size:19px; color:#232323; border-bottom:1px solid #e0e0e0; margin-bottom:8px; }
+#start-menu-apps { display:flex; flex-direction:column; gap:8px; padding:0 14px; }
+.start-app { display:flex; align-items:center; gap:13px; padding:7px 8px; border-radius:8px; cursor:pointer; font-size:16px; transition: background 0.13s; }
+.start-app img { width:29px; height:29px; border-radius:8px; background: rgba(245,245,245,0.92); }
+.start-app:hover { background:#eaeaea; }
+
+#search-results { position:fixed; left:50%; bottom:75px; transform:translateX(-50%); width:330px; background: rgba(255,255,255,0.98); border-radius:13px; box-shadow:0 7px 32px rgba(0,0,0,0.19); display:none; z-index:210; padding:0 0 8px 0; }
+#search-results .result { display:flex; align-items:center; gap:10px; padding:9px 16px; border-radius:8px; cursor:pointer; font-size:15px; color:#232323; transition:background 0.13s; }
+#search-results .result img { width:25px; height:25px; border-radius:7px; background:#f5f5f5; }
+#search-results .result:hover { background:#eaeaea; }
+
+#notifications { position: fixed; top:18px; right:32px; z-index:999; }
+.notification { display:flex; align-items:center; background:#fff; color:#222; border-radius:9px; box-shadow:0 2px 18px #0004; padding:11px 20px 11px 12px; font-size:17px; margin-bottom:10px; opacity:0.95; animation:fadeIn 0.5s; }
+.notification img { width:26px; height:26px; margin-right:12px; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(-18px);} to{opacity:0.95;transform:translateY(0);} }
+
+/* Win11 window */
+.win11-window { position:absolute; width:640px; height:360px; background:#fff; border-radius:12px; box-shadow:0 10px 28px rgba(0,0,0,0.3); display:flex; flex-direction:column; overflow:hidden; }
+.win-header { display:flex; justify-content:space-between; align-items:center; height:32px; background:#2b2b2b; color:white; cursor:grab; padding:0 6px; }
+.win-header .win-left { display:flex; align-items:center; gap:6px; font-weight:600; font-size:13px; }
+.win-header .win-left img.win-icon { width:18px; height:18px; }
+.win-header .win-controls button { margin-left:6px; background:transparent; border:none; color:white; cursor:pointer; font-size:14px; }
+.win-body { flex:1; overflow:hidden; }
+.win-body iframe { width:100%; height:100%; border:none; }

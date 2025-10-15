@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Windows 11 Desktop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="desktop"></div>
+
+<!-- Taskbar -->
+<div id="taskbar">
+  <div id="start-menu-btn">
+    <img src="https://img.icons8.com/ios-filled/50/windows-10.png">
+  </div>
+  <div id="search-area">
+    <input type="text" id="search-bar" placeholder="Type here to search...">
+    <img src="https://img.icons8.com/ios-filled/50/search--v1.png" id="search-icon">
+  </div>
+  <div id="running-apps"></div>
+  <div id="time"></div>
+</div>
+
+<!-- Start Menu -->
+<div id="start-menu">
+  <div id="start-menu-header">All Apps</div>
+  <div id="start-menu-apps"></div>
+</div>
+
+<!-- Search Results -->
+<div id="search-results"></div>
+
+<!-- Notifications -->
+<div id="notifications"></div>
+
+<script src="windowmanager.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

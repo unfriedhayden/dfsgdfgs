@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin:18px; background:transparent;}
+    .nav a { margin-right: 18px; color: #0a84ff; text-decoration: none; }
+    .nav a:hover { text-decoration: underline; }
+    .back { display: inline-block; margin-top: 18px; color: #444; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>About This Desktop</h2>
+  <div class="nav">
+    <a href="#" onclick="openApp('settings')">Settings</a>
+    <a href="#" onclick="openApp('explorer')">File Explorer</a>
+  </div>
+  <p>
+    This is a web-based Windows 11–style desktop.<br>
+    You can open multiple apps, change wallpaper and theme, and more.<br>
+    <b>Made by Hayden & Copilot</b>
+  </p>
+  <div class="back" onclick="closeMe()">← Back to Desktop</div>
+  <script>
+    function closeMe() {
+      if (window.parent && window.parent.windowManager) {
+        for (const win of window.parent.windowManager.windows) {
+          if (win.appName === "about") window.parent.windowManager.close(win.id);
+        }
+      }
+    }
+    function openApp(app) {
+      window.parent.windowManager.openApp(app, window.parent.apps.find(a=>a.id===app));
+    }
+  </script>
+</body>
+</html>
