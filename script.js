@@ -3,7 +3,7 @@ const apps = [
   { name:"Games", id:"games", icon:"https://img.icons8.com/color/96/controller.png", url:"games/index2.html" },
   { name:"Remote Desktop", id:"remote", icon:"https://img.icons8.com/color/96/monitor.png", url:"https://parsec.app" },
   { name:"Settings", id:"settings", icon:"https://img.icons8.com/color/96/settings.png", url:"https://example.com" },
-  { name:"App Store", id:"appstore", icon:"https://img.icons8.com/?size=100&id=bep_ZUj5TddJ&format=png&color=000000", url:"https://example.com" },
+  { name:"App Store", id:"appstore", icon:"https://img.icons8.com/ios-filled/100/app-store.png", url:"https://example.com" },
   { name:"File Explorer", id:"explorer", icon:"https://img.icons8.com/color/96/folder-invoices--v1.png", url:"https://example.com" },
   { name:"About", id:"about", icon:"https://img.icons8.com/color/96/info--v1.png", html:"<h2>About this web desktop</h2><p>Demo Windows 11 style web desktop. made by Hayden</p>" }
 ];
