@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Windows 11 Desktop</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Raycast Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; color: #fff; font-family: sans-serif; }
+        #viewport { display: block; margin: 0 auto; background: #333; }
+        #gameMenu { 
+            position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.8); 
+            padding: 15px; display: none; color: #fff; z-index: 10;
+            border: 2px solid #fff; border-radius: 8px;
+        }
+        #gameMenu input, #gameMenu select, #gameMenu button { 
+            margin: 5px 0; display: block; width: 100%; box-sizing: border-box; 
+        }
+        #applyBtn { cursor: pointer; background: #444; color: #fff; border: 1px solid #fff; border-radius: 4px; padding: 5px; }
+    </style>
 </head>
 <body>
+    <canvas id="viewport" width="1920" height="1080"></canvas>
 
-<div id="desktop"></div>
+    <!-- Dynamic game menu -->
+    <div id="gameMenu">
+        <label for="mapSelect">Map:</label>
+        <select id="mapSelect">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
 
-<!-- Taskbar -->
-<div id="taskbar">
-  <div id="start-menu-btn">
-    <img src="https://img.icons8.com/ios-filled/50/windows-10.png">
-  </div>
-  <div id="search-area">
-    <input type="text" id="search-bar" placeholder="Type here to search...">
-    <img src="https://img.icons8.com/ios-filled/50/search--v1.png" id="search-icon">
-  </div>
-  <div id="running-apps"></div>
-  <div id="time"></div>
-</div>
+        <label for="botCount">Number of Bots:</label>
+        <input type="number" id="botCount" min="1" max="10" value="1">
 
-<!-- Start Menu -->
-<div id="start-menu">
-  <div id="start-menu-header">All Apps</div>
-  <div id="start-menu-apps"></div>
-</div>
+        <label for="botURL">Bot Image URL:</label>
+        <input type="text" id="botURL" placeholder="https://example.com/bot.png">
 
-<!-- Search Results -->
-<div id="search-results"></div>
+        <label for="ytLink">YouTube Video ID:</label>
+        <input type="text" id="ytLink" placeholder="Video ID only">
 
-<!-- Notifications -->
-<div id="notifications"></div>
+        <button id="applyBtn">Apply</button>
+    </div>
 
-<script src="windowmanager.js"></script>
-<script src="script.js"></script>
+    <!-- YouTube IFrame API -->
+    <div id="ytPlayer"></div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script src="raycast.js"></script>
 </body>
 </html>
