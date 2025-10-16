@@ -280,23 +280,15 @@ function loadYT(videoID){
         events: { onReady:function(event){ event.target.setVolume(0); event.target.playVideo(); } }
     });
 }
-function isgameover(distanceThreshold) {
-    if (Math.abs(player.pos.x - bot.pos.x) <= distanceThreshold && Math.abs(player.pos.y - bot.pos.y) <= distanceThreshold) {
-        gameover = true;
-    } else {
-        gameover = false;
-    }
-}
+
 
 // ================= GAME LOOP ==================
 let lastTime=null;
 function gameLoop(time){
-if (gameover == false){
     if(!lastTime) lastTime=time;
     const dt=(time-lastTime)/1000; lastTime=time;
     updatePlayer(dt); updateBots(dt);
     drawColumns(canvas, castRays(canvas.width));
-    isgameover(0.25);
     requestAnimationFrame(gameLoop);
 }
 
