@@ -1,6 +1,7 @@
 const apps = [
   { name:"Proxy", id:"proxy", icon:"https://img.icons8.com/color/96/internet--v1.png", url:"https:/www.google.com/embedded" },
   { name:"Games", id:"games", icon:"https://img.icons8.com/color/96/controller.png", url:"games/index2.html" },
+  { name:"Kanye", id:"kanye", icon:"https://img.icons8.com/color/96/controller.png", url:"apps/Kanye/index.html" },
   { name:"Remote Desktop", id:"remote", icon:"https://img.icons8.com/color/96/monitor.png", url:"https://parsec.app" },
   { name:"Settings", id:"settings", icon:"https://img.icons8.com/color/96/settings.png", url:"https://example.com" },
   { name:"App Store", id:"appstore", icon:"https://img.icons8.com/color/96/apple-app-store.png", url:"https://example.com" },
