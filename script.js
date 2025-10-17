@@ -1,5 +1,5 @@
 const apps = [
-  { name:"Proxy", id:"proxy", icon:"https://img.icons8.com/color/96/internet--v1.png", url:"https:/www.google.com/embedded" },
+  { name:"Proxy", id:"proxy", icon:"https://img.icons8.com/color/96/internet--v1.png", url:"apps/unblocker/public/index.html" },
   { name:"Games", id:"games", icon:"https://img.icons8.com/color/96/controller.png", url:"games/index2.html" },
   { name:"Kanye", id:"kanye", icon:"https://img.icons8.com/color/96/controller.png", url:"apps/Kanye/index.html" },
   { name:"Remote Desktop", id:"remote", icon:"https://img.icons8.com/color/96/monitor.png", url:"https://parsec.app" },
